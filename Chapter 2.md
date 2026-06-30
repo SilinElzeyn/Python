@@ -1,0 +1,72 @@
+# Python
+Learn python with me
+
+# Chapter 2: Printing and manipulating text
+
+print ("Hello") # The whole line is a statement, print is a function, Hello is an argument, and "Hello" is a string ---> The output should be: Hello
+
+DNA_1 = "ATGCGTA" # Here, I am assigning the variable DNA with a value = ATGCGTA
+print (DNA_1) # No need to put "" because the quotes are part of the string, so they are already "built in" to the variable ---> The output should be: ATGCGTA
+
+
+# Concatenation (using the + symbol)
+DNA_2 = "AATT" + "GGCC"
+print (DNA_2) # ---> The output should be: AATTGGCC
+
+DNA_3 = "AAA"
+DNA_MIX = DNA_3 + "ATGC"
+print (DNA_MIX)  # ---> The output should be: AAAATGC
+
+
+
+# Finding the length of a string (using len function (len is short for length))
+DNA_1 = "ATGCGTA"
+DNA_Length = len(DNA_1)
+print ("The length of the DNA 1 is " + str(DNA_Length)) # we cannot concatenate 'str' and 'int' objects, so in order to solve the issue, str turns a number into a string so that we can print it
+# ---> The output should be: The length of the DNA 1 is 7
+
+
+
+# Changing case (using .lower() , or .upper())
+DNA_5 = "ATCG"
+Lowercase_DNA = DNA_5.lower()
+print (Lowercase_DNA) # ---> The output should be: atcg
+
+
+
+# Replacement (using .replace(old:"", new:""))
+protein = "vlspadktnv"
+print (protein.replace("v","y")) # replacing valine "v" with tyrosine "y"   ---> The output should be: ylspadktny
+print (protein) # note that the original variable is not affected ---> The output should be: vlspadktnv
+
+
+
+# Extracting part of a string [aka substring]
+protein = "vlspadktnv"
+print(protein[3:5]) # print positions three to five ---> The output should be: pa
+print(protein[0:6]) # note that positions start at zero, not one, v = position number 0 ---> The output should be: vlspad
+# why pa not pad? because the positions are inclusive at the start, but exclusive at the stop.
+
+
+
+# Counting substrings (using count.)
+protein = "vlspadktnv"
+valine_count = protein.count('v')
+lsp_count = protein.count('lsp')
+tryptophan_count = protein.count('w')
+
+# now print the counts
+print("valines: " + str(valine_count)) # ---> The output should be: valines: 2
+print("leucines: " + str(lsp_count)) # ---> The output should be: leucines: 1
+print("tryptophans: " + str(tryptophan_count)) # ---> The output should be: tryptophans: 0
+
+
+
+# Finding substrings (using find.) (aka index of the substring)
+protein = "vlspadktnv"
+print(str(protein.find('v'))) # ---> The output should be: 0 ... position counting starts from 0 , the output will be the position at which that substring first appears in the string
+print(str(protein.find('w'))) # ---> The output should be: valines: -1 ... because we are trying to locate a substring that doesn't exist
+
+
+
+
