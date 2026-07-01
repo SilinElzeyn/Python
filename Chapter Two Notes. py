@@ -64,6 +64,3 @@ protein = "vlspadktnv"
 print(str(protein.find('v'))) # ---> The output should be: 0 ... position counting starts from 0 , the output will be the position at which that substring first appears in the string
 print(str(protein.find('w'))) # ---> The output should be: valines: -1 ... because we are trying to locate a substring that doesn't exist
 
-
-
-
