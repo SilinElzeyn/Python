@@ -124,3 +124,5 @@ coding_region = first_exon + second_exon
 the_intron = long_dna[62:90]
 
 print (first_exon + the_intron.lower() + second_exon)
+
+
