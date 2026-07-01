@@ -1,6 +1,3 @@
-# Python
-Learn python with me
-
 # Chapter 2: Printing and manipulating text
 
 print ("Hello") # The whole line is a statement, print is a function, Hello is an argument, and "Hello" is a string ---> The output should be: Hello
