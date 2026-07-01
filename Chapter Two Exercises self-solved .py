@@ -1,4 +1,4 @@
-# Chapter Two - Exercises:
+# Chapter Two- Exercises:
 
 # Exercise 1: Here's a short DNA sequence:
 # ACTGATCGATTACGTATAGTATTTGCTATCATACATATATATCGATGCGTTCAT
@@ -122,7 +122,6 @@ print (percentage) # which is correct ---> 77.23577235772358
 # part three - answer:
 coding_region = first_exon + second_exon
 the_intron = long_dna[62:90]
-
 print (first_exon + the_intron.lower() + second_exon)
 
 
