@@ -1,0 +1,70 @@
+# Chapter 3: Reading and Writing Files
+# working with file objects using methods
+
+
+
+# Reading text from a file
+genomic_file = open("genomic_dna.txt")
+file_content = genomic_file.read()
+print(file_content)
+
+
+
+# Files, contents and file names
+file = "genomic_dna.txt" # ---> assigning a string to a variable ----> the name of the file
+my_file = open(file) # ---> using the variable as an argument in the open function ----> is a file object
+my_file_contents = my_file.read() # is a string ----> storing the content of the txt file within ---> the contents
+print(my_file_contents)
+
+
+
+# Dealing with newlines
+file = "genomic_dna.txt"
+my_file = open(file)
+my_file_contents = my_file.read()
+print("The file content is " + my_file_contents)
+dna_length = len(my_file_contents)
+print("The length of the dna is " + str(dna_length))
+
+print("The sequence is " + my_file_contents + ", and its length is " + str(dna_length))
+# I tried to combine the two sentences in one, but when running it, the output is divided into two lines
+# The sequence is ATCGATCGATCGATCGACTGACTAGTCATAGCTATGCATGTAGCTACTCGATCGATCGATCGATCGATCGATCGATCGATCGATCATGCTATCATCGATCGATATCGATGCATCGACTACTAT
+# , and its length is 124
+
+# The method is called rstrip ---> I will be able to combine the two lines into single one
+file = "genomic_dna.txt"
+my_file = open(file)
+my_file_contents = my_file.read()
+
+dna = my_file_contents.rstrip("\n") # ---> here, I used the method rstrip("\n") to remove the new line created
+
+dna_length = len(my_file_contents)
+
+print("The sequence is " + dna + ", and its length is " + str(dna_length))
+
+
+
+# Writing text to files and closing files
+# "r" for reading, "w" for writing, or "a" for appending ----> "w" overwrite the current contents, "a" add new data onto the end of the file but will not remove any existing content
+# file = open("1.txt", "w") ---> writing a new thing and removing the old thing
+# file = open("1.txt", "a") ---> adding a new thing without removing the old thing
+# file.write("Hello world")
+# file.close()
+
+
+
+# Paths and folders
+# The open function is quite happy to deal with files from anywhere on your computer, as long as you give the full path
+# Just give a file path as the argument rather than a file name
+# I just right-clicked the file text ---> and then copy as path
+# new_file = open(r"name.txt") ---> put r before
+
+new_file = open(r"C:\Users\resea\OneDrive\Documents\Python Trainning\Chapter 3\genomic_dna.txt")
+
+
+# Questions I have:
+# If I wanted to create a line I use "\n" inside the argument ... right?
+# and If I want to create a new file I write new_file = open(r"name.txt", "w"), with txt can differ based on the thing that we need either fasta file ...
+# and also I can create a file by doing new_file = open(r"C:\Users\resea\OneDrive\Documents\Python Trainning\Chapter 3\genomic_dna.txt","w")
+
+
